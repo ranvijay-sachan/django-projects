@@ -1,0 +1,17 @@
+{% extends "article/base.html" %}	
+{% block sidebar %}
+  <ul>
+	<li><a href="/articles/all">Cancel</a></li>
+  </ul>
+{% endblock %}
+{% block content %}
+
+  <form action="/articles/create/" method="post">{% csrf_token %}
+  <table>
+  {{form.as_table}}
+  </table>
+  <input type="submit" name="submit" value="Create Article" />
+
+  </form>
+
+{% endblock %}

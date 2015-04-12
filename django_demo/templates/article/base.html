@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>{% block title %}My Base Template{% endblock %}</title>
+      <!-- Custom styles for this template -->
+	<link href="{% static "css/blog.css" %}" rel="stylesheet">
+ </head>
+ <body>
+  <div id="page">
+	  <div id="sidebar">
+	  <img src="{% static "images/logo.jpg" %}" />
+	  {% block sidebar %}
+	  <ul>
+		<li><a href="/articles/all">Articles</a></li>
+		<li><a href="/admin">Admin</a></li>
+		<li><a href="/">Login Page</a></li>
+	  </ul>
+	  {% endblock %}
+	  </div>
+  </div>
+
+  <div id="content">
+	{% block content %}This is the content area{% endblock %}
+  </div>
+
+
+ </body>
+</html>

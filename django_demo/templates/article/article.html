@@ -1,0 +1,15 @@
+<html>
+	<body>
+	{% extends "article/base.html" %}	
+	{% block sidebar %}
+	  <ul>
+		<li><a href="/articles/all">Articles</a></li>
+		<li><a href="/">Login Page</a></li>
+	  </ul>
+	{% endblock %}
+	{% block content %}
+	   <h1>{{ article.title }}</h1>
+	   <p>{{ article.body }}</p>
+	{% endblock %}
+	</body>
+</html>
